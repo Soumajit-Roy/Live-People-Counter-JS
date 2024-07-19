@@ -1,20 +1,29 @@
+/* Center the container within the body */
 body {
     background-image: url(image1.jpg);
-    background-size:cover;
+    background-size: cover;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     text-align: center;
     height: 100vh;
-    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
 }
 
+/* Center the items inside the container */
 .container {
     background: white;
-    max-width: 70%;
+    max-width: 50%;
     margin: auto;
-    border: 5px solid wheat;
-    border-radius: 5px;
-    padding: 10px;
+    border: 5px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px 0 #94FFD8, 0 4px 10px 0 #A3D8FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 button {
@@ -25,8 +34,7 @@ button {
     color: azure;
     font-size: large;
     font-weight: bold;
-    width: 250px;
-
+    width: 150px;
 }
 
 button:active {
@@ -47,26 +55,30 @@ button:hover {
 }
 
 #save-el {
-    border: none;
     border-radius: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px;
     color: azure;
     font-size: large;
     font-weight: bold;
-    background-color:darkslateblue;
+    background-color: darkslateblue;
+    width: auto;
 }
 
 h1 {
     color: #2E236C;
-    margin-top: 100px;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
 h2 {
-    color:#FFDE4D;
-    
+    color: #FFDE4D;
     font-size: 50px;
     margin-top: 0;
     margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    button {
+        width: 250px;
+    }
 }
